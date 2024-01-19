@@ -53,3 +53,7 @@ yarn-error.log*
 /playwright/envs.js
 
 **.dec**
+
+/.idea
+/.vscode
+/.vercel
