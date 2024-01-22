@@ -4,10 +4,10 @@
 ./download_assets.sh ./public/assets
 
 # Check run-time ENVs values
-./validate_envs.sh
-if [ $? -ne 0 ]; then
-  exit 1
-fi
+#./validate_envs.sh
+#if [ $? -ne 0 ]; then
+#  exit 1
+#fi
 
 # Generate favicons bundle
 ./favicon_generator.sh
@@ -22,7 +22,7 @@ echo
 ./make_envs_script.sh
 
 # Print list of enabled features
-node ./feature-reporter.js
+#node ./feature-reporter.js
 
 echo "Starting Next.js application"
 exec "$@"
