@@ -1,9 +1,9 @@
 {
   "favicon_generation": {
-    "api_key": "<api_key>",
+    "api_key": "87d5cd739b05c00416c4a19cd14a8bb5632ea563",
     "master_picture": {
       "type": "url",
-      "url": "<master_url>"
+      "url": "https://raw.githubusercontent.com/btclayer2/bevm-website/main/public/favicon.svg?token=GHSAT0AAAAAABZCMN5TU5ALVSKGCPTZDB56ZNOECLQ"
     },
     "files_location": {
       "type": "path",

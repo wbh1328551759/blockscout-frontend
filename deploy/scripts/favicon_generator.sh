@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#master_url="${FAVICON_MASTER_URL:-$NEXT_PUBLIC_NETWORK_ICON}"
-master_url="https://raw.githubusercontent.com/btclayer2/bevm-website/main/public/favicon.svg?token=GHSAT0AAAAAABZCMN5TU5ALVSKGCPTZDB56ZNOECLQ"
+master_url="${FAVICON_MASTER_URL:-$NEXT_PUBLIC_NETWORK_ICON}"
+#master_url=""
 export MASTER_URL="$master_url"
 
 cd ./deploy/tools/favicon-generator
