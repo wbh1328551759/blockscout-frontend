@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/react';
 import React from 'react';
 
 import isBodyAllowed from 'lib/api/isBodyAllowed';
@@ -21,7 +22,6 @@ export default function useFetch() {
     const _body = params?.body;
     const isFormData = _body instanceof FormData;
     const withBody = isBodyAllowed(params?.method);
-    meta;
 
     const body: FormData | string | undefined = (() => {
       if (!withBody) {
@@ -51,14 +51,14 @@ export default function useFetch() {
           statusText: response.statusText,
         };
 
-        // if (!meta?.omitSentryErrorLog) {
-        //   Sentry.captureException(new Error('Client fetch failed'), { tags: {
-        //     source: 'fetch',
-        //     'source.resource': meta?.resource,
-        //     'status.code': error.status,
-        //     'status.text': error.statusText,
-        //   } });
-        // }
+        if (!meta?.omitSentryErrorLog) {
+          Sentry.captureException(new Error('Client fetch failed'), { tags: {
+            source: 'fetch',
+            'source.resource': meta?.resource,
+            'status.code': error.status,
+            'status.text': error.statusText,
+          } });
+        }
 
         return response.json().then(
           (jsonError) => Promise.reject({
