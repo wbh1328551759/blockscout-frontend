@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Download external assets
-./download_assets.sh ./public/assets
+dotenv \
+  -e .env \
+  -- bash -c './download_assets.sh ./public/assets'
 
 # Check run-time ENVs values
 #./validate_envs.sh

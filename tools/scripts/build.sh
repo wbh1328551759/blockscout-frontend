@@ -56,12 +56,15 @@ cp ./deploy/scripts/favicon_generator.sh .
 chmod -R 777 ./deploy/tools/favicon-generator
 chmod -R 777 ./public
 
-echo '当前目录： '
-ls
 # Run the entrypoint script
 
 echo 'start entrypoint------'
 ./entrypoint.sh
+
+echo 'public目录： '
+cd ./public
+ls
+cd -
 
 # 打包
 echo 'start build app----'
