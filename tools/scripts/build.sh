@@ -34,7 +34,7 @@ cd -
 #cd -
 
 echo 'copy envs-validator and feature-reporter----'
-cp ./deploy/tools/envs-validator/index.js ./envs-validator.js
+#cp ./deploy/tools/envs-validator/index.js ./envs-validator.js
 cp ./deploy/tools/feature-reporter/index.js ./feature-reporter.js
 
 
@@ -72,7 +72,7 @@ rm ./validate_envs.sh
 rm ./make_envs_script.sh
 rm ./download_assets.sh
 rm ./favicon_generator.sh
-rm ./envs-validator.js
+#rm ./envs-validator.js
 rm ./feature-reporter.js
 
 exit 0
