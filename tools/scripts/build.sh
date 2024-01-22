@@ -27,11 +27,11 @@ yarn compile_config
 yarn build
 cd -
 
-echo 'build envs-validator----'
-cd ./deploy/tools/envs-validator
-yarn install
-yarn build
-cd -
+#echo 'build envs-validator----'
+#cd ./deploy/tools/envs-validator
+#yarn install
+#yarn build
+#cd -
 
 echo 'copy envs-validator and feature-reporter----'
 cp ./deploy/tools/envs-validator/index.js ./envs-validator.js
