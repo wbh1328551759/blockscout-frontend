@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #master_url="${FAVICON_MASTER_URL:-$NEXT_PUBLIC_NETWORK_ICON}"
-master_url="https://coming-website.s3.us-east-2.amazonaws.com/bevm.png"
+master_url="${$NEXT_PUBLIC_NETWORK_ICON}"
 export MASTER_URL="$master_url"
 
 dotenv \

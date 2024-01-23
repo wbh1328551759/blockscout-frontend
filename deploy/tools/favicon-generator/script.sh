@@ -18,10 +18,6 @@ fi
 
 echo "🌀 Generating favicons bundle..."
 
-echo "Current PATH: $PATH"
-which jq
-echo "script.sh in .env.secrets: $(cat .env.secrets)"
-
 # Check if MASTER_URL is provided
 if [ -z "$MASTER_URL" ]; then
   echo "🛑 Error: MASTER_URL variable is not provided."

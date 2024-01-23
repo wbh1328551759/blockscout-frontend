@@ -12,7 +12,10 @@ dotenv \
 #fi
 
 # Generate favicons bundle
-./favicon_generator.sh
+dotenv \
+  -e .env \
+  -- bash -c './favicon_generator.sh'
+
 if [ $? -ne 0 ]; then
   echo "👎 Unable to generate favicons bundle."
 else
