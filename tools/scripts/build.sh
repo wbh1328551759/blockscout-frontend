@@ -61,11 +61,6 @@ chmod -R 777 ./public
 echo 'start entrypoint------'
 ./entrypoint.sh
 
-echo 'public目录： '
-cd ./public
-ls
-cd -
-
 # 打包
 echo 'start build app----'
 yarn build

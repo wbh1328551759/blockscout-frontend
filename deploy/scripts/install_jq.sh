@@ -7,6 +7,8 @@ JQ_TARGET="./jq"
 curl -L $JQ_URL -o $JQ_TARGET
 chmod +x $JQ_TARGET
 
+echo "jq installed at $(pwd)/jq"
 
-# install_jq.sh
 echo "PATH=\$PATH:$(pwd)" >> .env.secrets
+
+echo "PATH updated in .env.secrets: $(cat .env.secrets)"
