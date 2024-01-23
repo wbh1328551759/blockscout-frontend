@@ -4,7 +4,7 @@
 master_url="https://coming-website.s3.us-east-2.amazonaws.com/bevm.png"
 export MASTER_URL="$master_url"
 
-bash ./deploy/scripts/install_jq.sh && dotenv \
+dotenv \
   -v MASTER_URL=$master_url \
   -e .env.secrets \
   -- bash -c 'cd ./deploy/tools/favicon-generator && ./script.sh'

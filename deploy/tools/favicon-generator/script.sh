@@ -1,5 +1,21 @@
 #!/bin/bash
 
+echo "Install jq tool..."
+# Install jq
+JQ_URL="https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64"
+JQ_TARGET="./jq"
+curl -L $JQ_URL -o $JQ_TARGET
+chmod +x $JQ_TARGET
+export PATH=$PATH:$(pwd)
+
+# Check jq installation
+if ! command -v jq &> /dev/null
+then
+    echo "jq could not be found"
+    exit
+fi
+
+
 echo "🌀 Generating favicons bundle..."
 
 echo "Current PATH: $PATH"
