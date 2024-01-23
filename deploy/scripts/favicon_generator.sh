@@ -1,14 +1,13 @@
 #!/bin/bash
 
-master_url="${FAVICON_MASTER_URL:-$NEXT_PUBLIC_NETWORK_ICON}"
-#master_url=""
+#master_url="${FAVICON_MASTER_URL:-$NEXT_PUBLIC_NETWORK_ICON}"
+master_url="https://coming-website.s3.us-east-2.amazonaws.com/bevm.png"
 export MASTER_URL="$master_url"
 
 dotenv \
   -v MASTER_URL=$master_url \
-  -e $secrets_file \
+  -e .env.secrets \
   -- bash -c 'cd ./deploy/tools/favicon-generator && ./script.sh'
-cd -
 #if [ $? -ne 0 ]; then
 #    cd ../../../
 #    exit 1
